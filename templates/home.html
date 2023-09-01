@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<main class="container pt-5">
+    <section class="card card-body">
+        <h1 class="display-1 text-center">Django  App</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam numquam voluptatum consequatur saepe repudiandae
+            recusandae, excepturi sit labore cumque necessitatibus. Ratione delectus animi corrupti id fugit non, quo et
+            corporis.
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas aliquid est id laudantium consequuntur nostrum
+            modi, vitae obcaecati doloribus reprehenderit. Voluptate voluptatibus officia quae molestiae libero fuga
+            corporis voluptates magni?
+            Unde aut explicabo natus reprehenderit quas, doloribus distinctio accusamus perspiciatis exercitationem enim
+            numquam eum accusantium error laborum consequuntur, quaerat qui labore. Ad odio dolores, reprehenderit cumque
+            non distinctio illo veritatis!
+            Doloribus provident similique impedit ullam? Quidem vitae, doloribus, quia voluptatum id praesentium ratione
+            optio tempora corrupti pariatur a. Adipisci eos veniam, dolorum corrupti aliquid sed est ipsum eum asperiores
+            dolore.
+            Cumque asperiores expedita cum nihil unde, quia consequatur tempora fuga id, in exercitationem, ratione hic ex
+            temporibus necessitatibus at quam! Doloribus rerum, ab fuga sequi quod iste quaerat libero placeat!
+            Commodi sit animi doloribus nisi ut! Voluptates, tempore dicta ipsa possimus dolores, vel, expedita ratione quia
+            inventore ut laudantium nihil quibusdam vero ab quo. Exercitationem accusamus possimus repudiandae sapiente
+            natus.
+            Assumenda itaque dolor aliquid, nemo cumque similique quidem obcaecati, animi praesentium, ipsa reiciendis. Eos
+            dolorem quia sunt, ad ex voluptate iusto est deserunt quod deleniti, debitis tempora nostrum numquam suscipit.
+            Quaerat ea facere voluptatibus dolor error, inventore architecto, officia eos placeat, doloribus aliquid quia
+            reiciendis harum nesciunt recusandae sequi praesentium provident et laboriosam illo. Iusto voluptatem soluta
+            dolorum non? Hic?
+            Saepe nihil enim numquam sunt est unde obcaecati maxime, nam neque omnis beatae, error aliquam ipsum odio ut
+            impedit eos. Nobis repudiandae at eum ipsum dolores enim nam numquam omnis?
+        </p>
+        {% if user.is_authenticated %}
+        {% else %}
+        <div class="text-center">
+            <a class="btn btn-outline-primary me-2" href="{% url 'signin' %}">Login</a>
+            <a class="btn btn-primary" href="{% url 'signup' %}">Signup</a>
+        </div>
+        {% endif %}
+
+    </section>
+</main>
+
+{% endblock content %}
